@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pau Granada | Branding & web design</title>
+    <link rel="stylesheet" href="styles/mq-max480.css">
+    <link rel="stylesheet" href="styles/mq-min481.css">
+    <link rel="stylesheet" href="styles/mq-min769.css">
+    <link rel="stylesheet" href="styles/mq-min1025.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="media/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="media/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="media/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="media/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="media/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="media/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="media/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="media/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="media/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="media/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="media/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
+    <link rel="manifest" href="media/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="media/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="media/logo_paugranada_blanco_250_100.png" id="logo-cabecera" alt="Logo cabecera">
+            <div class="icon-menu" id="icon-menu">
+                <span class="line-1"></span>
+                <span class="line-2"></span>
+                <span class="line-3"></span>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="element-menu ea">
+                <p class="element-menu-title emta">BRANDING</p>
+            </div>
+            <div class="element-menu eb">
+                <p class="element-menu-title emtb">DESARROLLO WEB</p>
+            </div>
+            <div class="element-menu ec">
+                <p class="element-menu-title emtc">MARKETING DIGITAL</p>
+            </div>
+            <div class="element-menu ed">
+                <p class="element-menu-title emtd">ACERCA DE</p>
+            </div>
+            <div class="element-menu ee">
+                <p class="element-menu-title emte">CONTACTO</p>
+            </div>
+        </div>
+    </header>
+<script>
+var menuIcon = document.getElementById("icon-menu");
+var menu = document.querySelector(".menu");
+
+menuIcon.onclick = function () {
+    if (menu.classList.contains("open")) {
+        // fade out
+        menu.classList.remove("open");
+        menu.classList.add("closing");
+        menuIcon.classList.remove("openmenu");
+
+        // Tras 500ms (duración del fade) quitamos "closing" para resetear
+        setTimeout(function() {
+            menu.classList.remove("closing");
+        }, 500);
+
+    } else {
+        // fade in
+        menu.classList.add("open");
+        menuIcon.classList.add("openmenu");
+    }
+
+    if ("vibrate" in navigator) {
+        navigator.vibrate(25);
+    }
+};
+
+</script>
+
+</body>
+</html>
